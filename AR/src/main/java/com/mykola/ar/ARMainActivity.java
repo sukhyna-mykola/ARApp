@@ -76,7 +76,7 @@ public class ARMainActivity extends ARActivity implements View.OnClickListener {
     }
 
     public void onStop() {
-        NativeRenderer.demoShutdown();
+        Native.nativeShutdown();
 
         super.onStop();
     }

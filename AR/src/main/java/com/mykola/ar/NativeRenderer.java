@@ -59,84 +59,54 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class NativeRenderer extends ARRenderer {
 
-
-    // Load the native libraries.
-    static {
-        System.loadLibrary("c++_shared");
-        System.loadLibrary("ARWrapper");
-        System.loadLibrary("Native");
-    }
-
     private FPSCounter counter = new FPSCounter();
 
-    public static native void demoInitialise();
-
-    public static native void demoShutdown();
-
-    public static native void demoSurfaceCreated();
-
-    public static native void demoSurfaceChanged(int w, int h);
-
-    public static native void demoDrawFrame();
-
-    public static native float scale(float s);
-
-    public static native void translate(float x,float y, float z);
-
-    /**
-     * By overriding {@link #configureARScene}, the markers and other settings can be configured
-     * after the native library is initialised, but prior to the rendering actually starting.
-     * Note that this does not run on the OpenGL thread. Use onSurfaceCreated/demoSurfaceCreated
-     * to do OpenGL initialisation.
-     */
-
-
-    public static boolean flag;
     private float scale;
 
     public synchronized float scaleObjs(float f) {
-        flag = true;
         scale = f;
-        return   NativeRenderer.scale(scale);
+        return Native.scale(scale);
 
     }
 
-    public synchronized void translateObjs(float x,float y ,float z) {
 
-         NativeRenderer.translate(x,y,z);
+    public synchronized void translateObjs(float x, float y, float z) {
+
+        Native.translate(x, y, z);
 
     }
+
     @Override
     public boolean configureARScene() {
-        NativeRenderer.demoInitialise();
+
+        ObjectsHelper.getInstance().addObj("Data/models/Sony.obj", "single;Data/marker.patt;80", 1.0f);
+        ObjectsHelper.getInstance().addObj("Data/models/Porsche_911_GT3.obj", "single;Data/hiro.patt;80", 0.03f);
+        ObjectsHelper.getInstance().addObj("Data/models/Ferrari_Modena_Spider.obj", "single;Data/kanji.patt;80", 0.03f);
+
         return true;
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int w, int h) {
         super.onSurfaceChanged(gl, w, h);
-        NativeRenderer.demoSurfaceChanged(w, h);
+        Native.nativeSurfaceChanged(w, h);
 
     }
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         super.onSurfaceCreated(gl, config);
-        NativeRenderer.demoSurfaceCreated();
+        Native.nativeSurfaceCreated();
 
     }
 
     @Override
-    public  synchronized void draw(GL10 gl) {
-       /* if (flag) {
-            flag = false;
-            NativeRenderer.scale(scale);
-        }*/
-        NativeRenderer.demoDrawFrame();
+    public synchronized void draw(GL10 gl) {
 
-        Log.d("TAG", "draw");
+        Native.nativeDrawFrame();
 
-        if (counter.frame()) Log.i("demo", counter.toString());
+        if (counter.frame())
+            Log.i("native", counter.toString());
 
     }
 
