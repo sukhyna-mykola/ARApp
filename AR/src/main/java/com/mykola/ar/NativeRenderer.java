@@ -61,30 +61,16 @@ public class NativeRenderer extends ARRenderer {
 
     private FPSCounter counter = new FPSCounter();
 
-    private float scale;
-
-    public synchronized float scaleObjs(float f) {
-        scale = f;
-        return Native.scale(scale);
-
-    }
-
-
-    public synchronized void translateObjs(float x, float y, float z) {
-
-        Native.translate(x, y, z);
-
-    }
 
     @Override
     public boolean configureARScene() {
 
-        ObjectsHelper.getInstance().addObj("Data/models/Sony.obj", "single;Data/marker.patt;80", 1.0f);
-        ObjectsHelper.getInstance().addObj("Data/models/Porsche_911_GT3.obj", "single;Data/hiro.patt;80", 0.03f);
-        ObjectsHelper.getInstance().addObj("Data/models/Ferrari_Modena_Spider.obj", "single;Data/kanji.patt;80", 0.03f);
-
+        ObjectsHelper.getInstance().addModel("Data/models/Porsche_911_GT3.obj", "single;Data/hiro.patt;80", 0.03f);
+        ObjectsHelper.getInstance().addModel("Data/models/table.obj", "single;Data/marker.patt;80", 1.0f);
+        ObjectsHelper.getInstance().setSelectedModel(ObjectsHelper.getInstance().getObjs().get(0));
         return true;
     }
+
 
     @Override
     public void onSurfaceChanged(GL10 gl, int w, int h) {
@@ -97,16 +83,30 @@ public class NativeRenderer extends ARRenderer {
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         super.onSurfaceCreated(gl, config);
         Native.nativeSurfaceCreated();
+        startTime = System.currentTimeMillis();
 
     }
 
+
+    private long endTime, startTime, dt;
+
     @Override
-    public synchronized void draw(GL10 gl) {
+    public void draw(GL10 gl) {
+        endTime = System.currentTimeMillis();
+        dt = endTime - startTime;
+        if (dt < 4)
+            try {
+                Thread.sleep(40 - dt);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        startTime = System.currentTimeMillis();
 
         Native.nativeDrawFrame();
 
         if (counter.frame())
             Log.i("native", counter.toString());
+
 
     }
 

@@ -75,7 +75,7 @@ MERGED from [com.android.support:animated-vector-drawable:25.1.0] /home/mykola/D
 	android:allowBackup
 		ADDED from /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/src/main/AndroidManifest.xml:30:9-35
 	android:icon
-		ADDED from /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/src/main/AndroidManifest.xml:31:9-38
+		ADDED from /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/src/main/AndroidManifest.xml:31:9-43
 	android:theme
 		ADDED from /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/src/main/AndroidManifest.xml:28:9-55
 	android:name
@@ -116,6 +116,8 @@ MERGED from [com.android.support:support-core-ui:25.1.0] /home/mykola/Documents/
 MERGED from [com.android.support:support-fragment:25.1.0] /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-vector-drawable:25.1.0] /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/AndroidManifest.xml:21:5-43
 MERGED from [com.android.support:animated-vector-drawable:25.1.0] /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:24.2.1] /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.jakewharton:butterknife:8.5.1] /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.5.1/AndroidManifest.xml:5:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:25.1.0] /home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion

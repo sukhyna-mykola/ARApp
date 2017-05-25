@@ -1,7 +1,5 @@
 package com.mykola.ar;
 
-import org.artoolkit.ar.base.FPSCounter;
-
 /**
  * Created by mykola on 23.05.17.
  */
@@ -17,7 +15,6 @@ public class Native {
     }
 
 
-
     public static native void nativeInitialise();
 
     public static native void nativeShutdown();
@@ -26,13 +23,16 @@ public class Native {
 
     public static native void nativeSurfaceChanged(int w, int h);
 
-    public static native void nativeDrawFrame();
+    public static synchronized native void nativeDrawFrame();
 
-    public static native float scale(float s);
 
-    public static native void translate(float x, float y, float z);
+    public static synchronized native float nativeScaleModel(int position, float s);
 
-    public static native int nativeAddObj(String data, String pattern,float scale);
+    public static synchronized native void nativeTranslateModel(int position, float x, float y, float z);
+
+    public static synchronized native void nativeRotateModel(int position, float angle, float x, float y, float z);
+
+    public static native int nativeAddObj(String data, String pattern, float scale);
 
     public static native int nativeGetObjsNumber();
 }

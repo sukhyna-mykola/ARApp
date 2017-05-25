@@ -1,30 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/topLayout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/mainLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" />
-
-    <Button
-        android:layout_below="@+id/edit_text"
-        android:id="@+id/scale_plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClick" />
+        android:padding="16dp"
+        android:layout_gravity="center">
 
-    <EditText
+        <FrameLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="960px"
+            android:layout_height="540px"
+            android:layout_gravity="center"
+            android:orientation="vertical" />
+    </FrameLayout>
 
-        android:id="@+id/edit_text"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-         />
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
-</RelativeLayout>
+
+        <ImageButton
+            android:src="@drawable/make_photo"
+            android:id="@+id/makePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageButton
+            android:onClick="onClick"
+            android:src="@drawable/models"
+            android:id="@+id/models"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:onClick="onClick"
+            android:src="@drawable/controll_model"
+            android:id="@+id/controll_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

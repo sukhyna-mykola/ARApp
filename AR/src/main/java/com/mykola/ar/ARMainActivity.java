@@ -49,35 +49,65 @@
 
 package com.mykola.ar;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.View;
-import android.widget.EditText;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
-import android.widget.Toast;
+
+import com.mykola.ar.callbacks.CallbackUpdate;
+import com.mykola.ar.dialog.ControllModelDialog;
+import com.mykola.ar.dialog.ModelsListDialog;
 
 import org.artoolkit.ar.base.ARActivity;
-import org.artoolkit.ar.base.ARToolKit;
 import org.artoolkit.ar.base.rendering.ARRenderer;
 
+public class ARMainActivity extends ARActivity implements CallbackUpdate,View.OnClickListener{
+    public static float WIDTH, HEIGHT;
 
-import java.util.Arrays;
-
-public class ARMainActivity extends ARActivity implements View.OnClickListener {
 
     private NativeRenderer nativeRenderer = new NativeRenderer();
-    private EditText text;
+    ;
+    private FrameLayout frameLayout;
+
+    private ViewTreeObserver.OnGlobalLayoutListener globalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
+
+        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+        @Override
+        public void onGlobalLayout() {
+
+            HEIGHT = frameLayout.getHeight();
+            WIDTH = frameLayout.getWidth();
+
+            frameLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+
+        }
+    };
+
+
+    private OnToutchController toutchController;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        text = (EditText) findViewById(R.id.edit_text);
+        frameLayout = (FrameLayout) findViewById(R.id.mainLayout);
+        frameLayout.getViewTreeObserver().addOnGlobalLayoutListener(globalLayoutListener);
+        toutchController = new OnToutchController();
 
     }
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        frameLayout.setOnTouchListener(toutchController);
+    }
+
+
     public void onStop() {
         Native.nativeShutdown();
-
         super.onStop();
     }
 
@@ -88,20 +118,25 @@ public class ARMainActivity extends ARActivity implements View.OnClickListener {
 
     @Override
     protected FrameLayout supplyFrameLayout() {
-        return (FrameLayout) this.findViewById(R.id.mainLayout);
+        return frameLayout;
+
 
     }
 
+    @Override
+    public void update() {
+
+    }
 
     @Override
     public void onClick(View view) {
-        try {
-          //  nativeRenderer.translateObjs(0,0,Float.parseFloat(text.getText().toString()));
-           float a =  nativeRenderer.scaleObjs(Float.parseFloat(text.getText().toString()));
-            Toast.makeText(this, Arrays.toString(ARToolKit.getInstance().getProjectionMatrix()) , Toast.LENGTH_SHORT).show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        switch (view.getId()){
+            case R.id.models:
+                new ModelsListDialog().show(getSupportFragmentManager(),"MODELS_DIALOG");
+                break;
+            case R.id.controll_model:
+                new ControllModelDialog().show(getSupportFragmentManager(),"CONTROLL_DIALOG");
+                break;
         }
     }
 }

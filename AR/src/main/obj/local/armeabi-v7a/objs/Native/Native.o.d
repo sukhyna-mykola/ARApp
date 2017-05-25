@@ -46,7 +46,17 @@
   /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/atomic \
   /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__undef_min_max \
   /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/climits \
-  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__split_buffer
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__split_buffer \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/mutex \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__mutex_base \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/chrono \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/ctime \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/android/support/include/time.h \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/ratio \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/system_error \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/cerrno \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__threading_support \
+  /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/functional
 
 jni/../../../../../../android/../include/AR/gsub_es.h:
 
@@ -143,3 +153,23 @@ jni/../../../../../../android/../include/ARWrapper/Error.h:
 /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/climits:
 
 /home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__split_buffer:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/mutex:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__mutex_base:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/chrono:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/ctime:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/android/support/include/time.h:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/ratio:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/system_error:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/cerrno:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/__threading_support:
+
+/home/mykola/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include/functional:

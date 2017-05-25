@@ -48,6 +48,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/mykola/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.5.1/bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc/butterknife-annotations-8.5.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc">
+        <dex dex="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/pre-dexed/debug/butterknife-annotations-8.5.1_2d9418f91c4d0c65de02620a1b9fc13c58d1b530.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -63,6 +72,15 @@
         revision="24.0.3"
         sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
         <dex dex="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_9f9c65810b2793b71a27eb3d508057520b7f7d78.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.5.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
+        <dex dex="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.5.1_026a11a19e744d114866e99fd4cfe9cc60f28bc5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -88,7 +106,7 @@
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="4f93837bd6ee44dd13729c389cedc0328a83de4d">
+        sha1="1587783f52cd2278d8b4f25b7302de0290b03e55">
         <dex dex="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/pre-dexed/debug/ARSimpleNativeCarsProj-aRBaseLib-unspecified_4f56e42a0b437e6008148d37b634671154f9e95d.jar" />
     </item>
     <item
@@ -99,6 +117,15 @@
         revision="24.0.3"
         sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
         <dex dex="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.0_84447ecae88e5953a0ecc135b2f640a06aa85637.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_892ae504850ad35cda2a5ea2fa2aa815c113238c.jar" />
     </item>
 
 </items>

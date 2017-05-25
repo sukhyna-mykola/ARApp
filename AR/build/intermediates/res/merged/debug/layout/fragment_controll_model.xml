@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Повернути" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <ImageButton
+                android:id="@+id/y_rotate_up"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:src="@drawable/ic_arrow_upward_black_24dp" />
+
+            <ImageButton
+
+                android:id="@+id/x_rotate_left"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/x_rotate_right"
+                android:layout_column="2"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/y_rotate_down"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_upward_black_24dp" />
+        </GridLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Крутити" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <ImageButton
+                android:id="@+id/z_rotate_left"
+                android:scaleX="-1"
+                android:src="@drawable/ic_redo_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/z_rotate_right"
+                android:src="@drawable/ic_redo_black_24dp" />
+
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Перемістити" />
+
+        <GridLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <ImageButton
+                android:id="@+id/y_translate_up"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:src="@drawable/ic_arrow_upward_black_24dp" />
+
+            <ImageButton
+
+                android:id="@+id/x_translate_left"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/x_translate_right"
+                android:layout_column="2"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/y_translate_down"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_upward_black_24dp" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Маштабувати" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <ImageButton
+
+                android:id="@+id/scale_minus"
+                android:src="@drawable/ic_zoom_out_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/scale_plus"
+                android:scaleX="-1"
+                android:src="@drawable/ic_zoom_in_black_24dp" />
+
+
+        </GridLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
