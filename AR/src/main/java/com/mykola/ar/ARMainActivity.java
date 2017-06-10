@@ -70,14 +70,12 @@ import org.artoolkit.ar.base.ARActivity;
 import org.artoolkit.ar.base.ScreenShot;
 import org.artoolkit.ar.base.rendering.ARRenderer;
 
-public class ARMainActivity extends ARActivity implements CallbackUpdate, View.OnClickListener {
+public class ARMainActivity extends ARActivity implements View.OnClickListener {
     public static float WIDTH, HEIGHT;
 
-    private Context context;
     private Thread t;
     private FrameLayout frameLayout;
     private ScreenShot screen = new ScreenShot(this);
-    private ImageView preview;
     private NativeRenderer nativeRenderer = new NativeRenderer(screen);
 
     private OnToutchController toutchController;
@@ -94,7 +92,6 @@ public class ARMainActivity extends ARActivity implements CallbackUpdate, View.O
             screen.setHeight((int) HEIGHT);
             screen.setWidth((int) WIDTH);
 
-
             frameLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
         }
@@ -110,7 +107,6 @@ public class ARMainActivity extends ARActivity implements CallbackUpdate, View.O
 
         frameLayout.getViewTreeObserver().addOnGlobalLayoutListener(globalLayoutListener);
         toutchController = new OnToutchController();
-        preview = (ImageView) findViewById(R.id.preview);
 
     }
 
@@ -142,10 +138,6 @@ public class ARMainActivity extends ARActivity implements CallbackUpdate, View.O
 
     }
 
-    @Override
-    public void update() {
-
-    }
 
     @Override
     public void onClick(View view) {

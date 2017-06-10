@@ -12,6 +12,10 @@
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-xxhdpi/models.png"
     },
     {
+        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_save_white_24dp.png",
+        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-xxhdpi/ic_save_white_24dp.png"
+    },
+    {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-xxhdpi/selected.png",
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-xxhdpi/selected.png"
     },

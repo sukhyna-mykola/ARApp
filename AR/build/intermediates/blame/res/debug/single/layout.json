@@ -136,10 +136,6 @@
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/layout/activity_screenshot.xml",
-        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/src/main/res/layout/activity_screenshot.xml"
-    },
-    {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/abc_popup_menu_header_item_layout.xml"
     },
@@ -162,6 +158,10 @@
     {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/layout/fragment_screenshot.xml",
+        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/src/main/res/layout/fragment_screenshot.xml"
     },
     {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",

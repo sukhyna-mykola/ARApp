@@ -4,6 +4,10 @@
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/selected.xml"
     },
     {
+        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_save_white_24dp.xml",
+        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_save_white_24dp.xml"
+    },
+    {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_redo_black_24dp.xml",
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_redo_black_24dp.xml"
     },
