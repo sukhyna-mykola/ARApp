@@ -10,17 +10,12 @@ import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.mykola.ar.ObjectsHelper;
 import com.mykola.ar.R;
 
-import butterknife.Unbinder;
-
 
 public class ControllModelDialog extends DialogFragment implements View.OnClickListener {
-
-    private Unbinder unbinder;
 
 
     public static ControllModelDialog newInstance() {
@@ -32,11 +27,6 @@ public class ControllModelDialog extends DialogFragment implements View.OnClickL
         return fragment;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
 
     @NonNull
     @Override
@@ -68,20 +58,11 @@ public class ControllModelDialog extends DialogFragment implements View.OnClickL
                 .create();
 
 
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.getWindow().setGravity(Gravity.RIGHT);
+
+
         return dialog;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        ViewGroup.LayoutParams params = getDialog().getWindow().getAttributes();
-        params.width = 300;
-        params.height = ViewGroup.LayoutParams.MATCH_PARENT;
-
-        getDialog().getWindow().setAttributes((android.view.WindowManager.LayoutParams) params);
-       // getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        getDialog().getWindow().setGravity(Gravity.RIGHT);
-
     }
 
     private float angle = (float) (Math.PI / 20);

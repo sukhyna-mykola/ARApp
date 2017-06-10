@@ -4,12 +4,12 @@
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/selected.xml"
     },
     {
-        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/models.xml",
-        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/models.xml"
-    },
-    {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_redo_black_24dp.xml",
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_redo_black_24dp.xml"
+    },
+    {
+        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/models.xml",
+        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/models.xml"
     },
     {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/make_photo.xml",
@@ -28,12 +28,16 @@
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_zoom_out_black_24dp.xml"
     },
     {
+        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/controll_model.xml",
+        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/controll_model.xml"
+    },
+    {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/un_selected.xml",
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/un_selected.xml"
     },
     {
-        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/controll_model.xml",
-        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/controll_model.xml"
+        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_share_white_24dp.xml",
+        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_share_white_24dp.xml"
     },
     {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_zoom_in_black_24dp.xml",

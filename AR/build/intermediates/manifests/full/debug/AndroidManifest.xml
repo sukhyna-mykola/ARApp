@@ -46,6 +46,9 @@
             </intent-filter>
         </activity>
         <activity android:name="org.artoolkit.ar.base.camera.CameraPreferencesActivity" />
+        <activity
+            android:name="com.mykola.ar.ScreenshotActivity"
+            android:parentActivityName="com.mykola.ar.ARMainActivity" />
     </application>
 
 </manifest>

@@ -52,6 +52,7 @@ package com.mykola.ar;
 import android.util.Log;
 
 import org.artoolkit.ar.base.FPSCounter;
+import org.artoolkit.ar.base.ScreenShot;
 import org.artoolkit.ar.base.rendering.ARRenderer;
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -59,15 +60,14 @@ import javax.microedition.khronos.opengles.GL10;
 
 public class NativeRenderer extends ARRenderer {
 
-    private FPSCounter counter = new FPSCounter();
 
+    public NativeRenderer(ScreenShot screenShot) {
+        super(screenShot);
+    }
 
     @Override
     public boolean configureARScene() {
-
-        ObjectsHelper.getInstance().addModel("Data/models/Porsche_911_GT3.obj", "single;Data/hiro.patt;80", 0.03f);
-        ObjectsHelper.getInstance().addModel("Data/models/table.obj", "single;Data/marker.patt;80", 1.0f);
-        ObjectsHelper.getInstance().setSelectedModel(ObjectsHelper.getInstance().getObjs().get(0));
+        ObjectsHelper.getInstance().init();
         return true;
     }
 
@@ -76,6 +76,7 @@ public class NativeRenderer extends ARRenderer {
     public void onSurfaceChanged(GL10 gl, int w, int h) {
         super.onSurfaceChanged(gl, w, h);
         Native.nativeSurfaceChanged(w, h);
+
 
     }
 
@@ -92,23 +93,26 @@ public class NativeRenderer extends ARRenderer {
 
     @Override
     public void draw(GL10 gl) {
-        endTime = System.currentTimeMillis();
+        super.draw(gl);
+      /*  endTime = System.currentTimeMillis();
         dt = endTime - startTime;
-        if (dt < 4)
+        if (dt < 40)
             try {
                 Thread.sleep(40 - dt);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         startTime = System.currentTimeMillis();
+*/
 
         Native.nativeDrawFrame();
 
-        if (counter.frame())
-            Log.i("native", counter.toString());
 
-
+        if (screenShot.isGl()) {
+            screenShot.getGlBitmap(gl);
+        }
     }
+
 
 }
 

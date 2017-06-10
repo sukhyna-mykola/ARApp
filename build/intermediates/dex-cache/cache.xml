@@ -106,7 +106,7 @@
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="1587783f52cd2278d8b4f25b7302de0290b03e55">
+        sha1="8b8397c2d41501873e3590b1b05ecb4fb62a8d8e">
         <dex dex="/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/pre-dexed/debug/ARSimpleNativeCarsProj-aRBaseLib-unspecified_4f56e42a0b437e6008148d37b634671154f9e95d.jar" />
     </item>
     <item

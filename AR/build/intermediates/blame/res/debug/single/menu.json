@@ -2,5 +2,9 @@
     {
         "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/menu/options.xml",
         "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/exploded-aar/ARSimpleNativeCarsProj/aRBaseLib/unspecified/res/menu/options.xml"
+    },
+    {
+        "merged": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/build/intermediates/res/merged/debug/menu/screenshot_dialog_menu.xml",
+        "source": "/home/mykola/Documents/artoolkit5/AndroidStudioProjects/ARSimpleNativeCarsProj/AR/src/main/res/menu/screenshot_dialog_menu.xml"
     }
 ]

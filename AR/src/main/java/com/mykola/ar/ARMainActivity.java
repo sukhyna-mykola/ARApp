@@ -49,27 +49,38 @@
 
 package com.mykola.ar;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.mykola.ar.callbacks.CallbackUpdate;
 import com.mykola.ar.dialog.ControllModelDialog;
 import com.mykola.ar.dialog.ModelsListDialog;
+import com.mykola.ar.dialog.ScreenshotDialog;
 
 import org.artoolkit.ar.base.ARActivity;
+import org.artoolkit.ar.base.ScreenShot;
 import org.artoolkit.ar.base.rendering.ARRenderer;
 
-public class ARMainActivity extends ARActivity implements CallbackUpdate,View.OnClickListener{
+public class ARMainActivity extends ARActivity implements CallbackUpdate, View.OnClickListener {
     public static float WIDTH, HEIGHT;
 
-
-    private NativeRenderer nativeRenderer = new NativeRenderer();
-    ;
+    private Context context;
+    private Thread t;
     private FrameLayout frameLayout;
+    private ScreenShot screen = new ScreenShot(this);
+    private ImageView preview;
+    private NativeRenderer nativeRenderer = new NativeRenderer(screen);
+
+    private OnToutchController toutchController;
 
     private ViewTreeObserver.OnGlobalLayoutListener globalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
 
@@ -80,29 +91,27 @@ public class ARMainActivity extends ARActivity implements CallbackUpdate,View.On
             HEIGHT = frameLayout.getHeight();
             WIDTH = frameLayout.getWidth();
 
+            screen.setHeight((int) HEIGHT);
+            screen.setWidth((int) WIDTH);
+
+
             frameLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
         }
     };
 
 
-    private OnToutchController toutchController;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         frameLayout = (FrameLayout) findViewById(R.id.mainLayout);
+
+
         frameLayout.getViewTreeObserver().addOnGlobalLayoutListener(globalLayoutListener);
         toutchController = new OnToutchController();
+        preview = (ImageView) findViewById(R.id.preview);
 
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        frameLayout.setOnTouchListener(toutchController);
     }
 
 
@@ -114,6 +123,16 @@ public class ARMainActivity extends ARActivity implements CallbackUpdate,View.On
     @Override
     protected ARRenderer supplyRenderer() {
         return nativeRenderer;
+    }
+
+    @Override
+    protected View.OnTouchListener getToutch() {
+        return toutchController;
+    }
+
+    @Override
+    protected ScreenShot getScreenShot() {
+        return screen;
     }
 
     @Override
@@ -130,13 +149,74 @@ public class ARMainActivity extends ARActivity implements CallbackUpdate,View.On
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.models:
-                new ModelsListDialog().show(getSupportFragmentManager(),"MODELS_DIALOG");
+                new ModelsListDialog().show(getSupportFragmentManager(), "MODELS_DIALOG");
                 break;
             case R.id.controll_model:
-                new ControllModelDialog().show(getSupportFragmentManager(),"CONTROLL_DIALOG");
+                new ControllModelDialog().show(getSupportFragmentManager(), "CONTROLL_DIALOG");
                 break;
+            case R.id.makePhoto:
+                takeScreenshot();
+                break;
+
         }
+    }
+
+    @Override
+    protected void takeScreenshot() {
+        super.takeScreenshot();
+        t = new Thread(r);
+        t.start();
+    }
+
+
+    /* private void makePhoto() {
+        v1 = frameLayout;
+        v1.setDrawingCacheEnabled(true);
+        v1.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+        v1.layout(0, 0, v1.getMeasuredWidth(), v1.getMeasuredHeight());
+        v1.buildDrawingCache(true);
+
+        Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        ImageView v = (ImageView) findViewById(R.id.preview);
+        v.setImageBitmap(bitmap);
+
+        v1.destroyDrawingCache();
+
+
+    }*/
+
+
+    private Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            boolean running = true;
+            while (running)
+                if (screen.isLoaded()) {
+                    running = false;
+                    screen.setLoaded(false);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ScreenshotDialog.newInstance(screen.getResultBitmap()).show(getSupportFragmentManager(), "SCREENSHOT_DIALOG");
+                        }
+                    });
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+        }
+    };
+
+
+    @Override
+    public void screenshot(Bitmap bitmap) {
+
     }
 }

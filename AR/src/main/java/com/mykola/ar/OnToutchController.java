@@ -75,8 +75,8 @@ public class OnToutchController implements View.OnTouchListener {
                     float dx = event.getX() - start.x;
                     float dy = event.getY() - start.y;
 
-                    dx = (float) (dx / WIDTH * 2 * Math.PI);
-                    dy = (float) (dy / HEIGHT * 2 * Math.PI);
+                    dx = dx / WIDTH;
+                    dy = dy / HEIGHT;
 
                     float angleY = (float) Math.atan2(dy, 1);
                     float angleX = (float) Math.atan2(dx, 1);

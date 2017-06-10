@@ -176,6 +176,7 @@ JNIEXPORT void JNICALL JNIFUNCTION_DEMO(nativeDrawFrame(JNIEnv* env, jobject obj
 
              const char *data = env->GetStringUTFChars(path , NULL ) ;
              model.obj = glmReadOBJ3(data, 0, 0,true);
+            // model.obj = glmReadOBJ2(data, 0, 0);
 
              if (!model.obj) {
             	LOGE("Error loading model from file '%s'.", data);

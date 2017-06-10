@@ -15,8 +15,7 @@
             android:id="@+id/mainLayout"
             android:layout_width="960px"
             android:layout_height="540px"
-            android:layout_gravity="center"
-            android:orientation="vertical" />
+            android:layout_gravity="center" />
     </FrameLayout>
 
     <LinearLayout
@@ -29,6 +28,7 @@
 
 
         <ImageButton
+            android:onClick="onClick"
             android:src="@drawable/make_photo"
             android:id="@+id/makePhoto"
             android:layout_width="wrap_content"
@@ -48,8 +48,11 @@
             android:id="@+id/controll_model"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-
+        <ImageView
+            android:onClick="onClick"
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
